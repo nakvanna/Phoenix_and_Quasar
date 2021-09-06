@@ -1,6 +1,26 @@
 <template>
-  <q-page>
-    <h1>Post Page</h1>
+  <q-page class="q-ma-md">
+    <q-card class="q-pt-md">
+      <q-card-section>
+        <q-form
+          @submit=""
+          @reset=""
+        >
+          <q-input
+            label="Title"
+            lazy-rules
+            :rules="[ val => val && val.length > 0 || 'Please type something']"
+          />
+          <q-input
+            label="Content"
+            type="textarea"
+            lazy-rules
+            :rules="[ val => val && val.length > 0 || 'Please type something']"
+          />
+          <q-btn type="submit" rounded color="teal-5" class="full-width">Create</q-btn>
+        </q-form>
+      </q-card-section>
+    </q-card>
   </q-page>
 </template>
 

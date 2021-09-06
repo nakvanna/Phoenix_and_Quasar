@@ -23,7 +23,7 @@ defmodule PhoenixerApi.Blogs do
     |> join(:inner, [p], _ in assoc(p, :user), as: :u)
     |> where(^QueryUtil.query_where(args))
     |> where(^QueryUtil.query_where(args.user_arg, :u))
-    |> Repo.all()
+    |> QueryUtil.apply_pagination(args)
   end
 
   @doc """

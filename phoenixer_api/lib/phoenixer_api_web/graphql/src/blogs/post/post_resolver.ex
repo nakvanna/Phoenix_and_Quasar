@@ -1,19 +1,26 @@
 defmodule PhoenixerApiWeb.Schema.Resolvers.Post do
   use Absinthe.Schema.Notation
+  use Absinthe.Relay.Schema.Notation, :modern
   alias PhoenixerApi.Blogs
 
-  #  use Absinthe.Relay.Schema, :classic
-
-
+  # connection for relay
+  connection node_type: :post do
+    field :count, :integer
+    # must include edge
+    edge do
+    end
+  end
 
   object :post_queries do
-    field :posts, list_of(:post) do
+    connection field :posts, node_type: :post do
       arg :condition, non_null(:json)
       arg :user_arg, non_null(:arg_condition)
-
-      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
+      #      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
       resolve(
-        fn args, _ -> {:ok, Blogs.list_posts(args)} end
+        fn args, _
+        ->
+          Blogs.list_posts(args)
+        end
       )
     end
 

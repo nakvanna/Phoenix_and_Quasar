@@ -1,5 +1,8 @@
 defmodule PhoenixerApi.Helpers.QueryUtil do
   import Ecto.Query, warn: false
+  alias PhoenixerApi.Helpers.QueryUtil
+  alias PhoenixerApi.Repo
+
 
   def query_where(args) do
     Enum.reduce(
@@ -49,5 +52,16 @@ defmodule PhoenixerApi.Helpers.QueryUtil do
         end
       end
     )
+  end
+
+  def apply_pagination(query, args) do
+    count = query
+            |> where(^QueryUtil.query_where(args))
+            |> Repo.aggregate(:count, :id)
+    result = query
+             |> where(^QueryUtil.query_where(args))
+             |> Absinthe.Relay.Connection.from_query(&Repo.all/1, args)
+    {:ok, edges} = result
+    {:ok, Map.put(edges, :count, count)}
   end
 end

@@ -25,13 +25,7 @@ defmodule PhoenixerApi.Accounts do
 
   """
   def list_users(args) do
-    count = User
-            |> Repo.aggregate(:count, :id)
-    result = User
-             |> where(^QueryUtil.query_where(args))
-             |> Absinthe.Relay.Connection.from_query(&Repo.all/1, args)
-    {:ok, edges} = result
-    {:ok, Map.put(edges, :count, count)}
+    QueryUtil.apply_pagination(User, args)
   end
 
   @doc """

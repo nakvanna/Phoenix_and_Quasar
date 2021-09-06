@@ -24,12 +24,23 @@ type UserConnection {
   count: Int
 }
 
+type PostEdge {
+  node: Post
+  cursor: String
+}
+
 input CreateUserInputType {
   name: String!
   username: String!
   email: String!
   password: String!
   passwordConfirmation: String!
+}
+
+type PostConnection {
+  pageInfo: PageInfo!
+  edges: [PostEdge]
+  count: Int
 }
 
 type Session {
@@ -87,7 +98,7 @@ type RootMutationType {
 type RootQueryType {
   users(after: String, first: Int, before: String, last: Int, condition: Json!): UserConnection
   findUser(id: ID): User
-  posts(condition: Json!, userArg: ArgCondition!): [Post]
+  posts(after: String, first: Int, before: String, last: Int, condition: Json!, userArg: ArgCondition!): PostConnection
   findPost(id: ID): Post
 }
 
