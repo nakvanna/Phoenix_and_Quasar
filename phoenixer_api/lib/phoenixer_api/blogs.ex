@@ -128,7 +128,7 @@ defmodule PhoenixerApi.Blogs do
       [%MediaPost{}, ...]
 
   """
-  def list_media_posts do
+  def list_media_posts(_attrs) do
     Repo.all(MediaPost)
   end
 
@@ -146,7 +146,7 @@ defmodule PhoenixerApi.Blogs do
       ** (Ecto.NoResultsError)
 
   """
-  def get_media_post!(id), do: Repo.get!(MediaPost, id)
+  def get_media_post(id), do: Repo.get(MediaPost, id)
 
   @doc """
   Creates a media_post.
