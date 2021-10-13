@@ -18,13 +18,31 @@ type PageInfo {
   endCursor: String
 }
 
+type MediaPostConnection {
+  pageInfo: PageInfo!
+  edges: [MediaPostEdge]
+  count: Int
+}
+
 type UserConnection {
   pageInfo: PageInfo!
   edges: [UserEdge]
   count: Int
 }
 
+type PostEdge {
+  node: Post
+  cursor: String
+}
+
+input CreateMediaPostInputType {
+  postId: ID
+  fileType: String!
+  fileUrl: String!
+}
+
 input CreateUserInputType {
+  profile: String
   name: String!
   username: String!
   email: String!
@@ -32,12 +50,25 @@ input CreateUserInputType {
   passwordConfirmation: String!
 }
 
+type PostConnection {
+  pageInfo: PageInfo!
+  edges: [PostEdge]
+  count: Int
+}
+
 type Session {
   token: String
   user: User
 }
 
+input UpdateMediaPostInputType {
+  fileType: String
+  fileUrl: String
+  postId: ID
+}
+
 input UpdateUserInputType {
+  profile: String
   name: String
   username: String
   email: String
@@ -56,6 +87,7 @@ type Post {
   success: Boolean
   message: String
   user: User
+  mediaPosts: [MediaPost]
 }
 
 input CreateSessionInput {
@@ -82,13 +114,18 @@ type RootMutationType {
   createPost(data: CreatePostInputType!): Post
   updatePost(id: ID, data: UpdatePostInputType): Post
   deletePost(id: ID): Post
+  createMediaPost(data: CreateMediaPostInputType!): MediaPost
+  updateMediaPost(id: ID, data: UpdateMediaPostInputType): MediaPost
+  deleteMediaPost(id: ID): MediaPost
 }
 
 type RootQueryType {
   users(after: String, first: Int, before: String, last: Int, condition: Json!): UserConnection
   findUser(id: ID): User
-  posts(condition: Json!, userArg: ArgCondition!): [Post]
+  posts(after: String, first: Int, before: String, last: Int, condition: Json!, userArg: ArgCondition!, orderBy: String): PostConnection
   findPost(id: ID): Post
+  mediaPosts(after: String, first: Int, before: String, last: Int, condition: Json!): MediaPostConnection
+  findMediaPost(id: ID): MediaPost
 }
 
 input UpdatePostInputType {
@@ -103,6 +140,7 @@ input CreatePostInputType {
   title: String!
   content: String!
   userId: ID!
+  mediaPosts: [CreateMediaPostInputType]
 }
 
 type UserEdge {
@@ -110,8 +148,24 @@ type UserEdge {
   cursor: String
 }
 
+type MediaPostEdge {
+  node: MediaPost
+  cursor: String
+}
+
+type MediaPost {
+  id: ID
+  fileType: String
+  fileUrl: String
+  postId: ID
+  success: Boolean
+  message: String
+  post: Post
+}
+
 type User {
   id: ID
+  profile: String
   name: String
   username: String
   email: String

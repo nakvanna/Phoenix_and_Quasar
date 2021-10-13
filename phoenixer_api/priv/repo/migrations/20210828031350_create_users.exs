@@ -3,6 +3,9 @@ defmodule PhoenixerApi.Repo.Migrations.CreateUsers do
 
   def change do
     create table(:users) do
+      add :profile,
+          :string,
+          default: "https://i.ibb.co/XV3D9Y2/Profile-Placeholder-image-Gray-silhouette-no-photo-of-a-person-on-the-avatar-The-default-pic-is-used.jpg"
       add :name, :string
       add :username, :string
       add :email, :string

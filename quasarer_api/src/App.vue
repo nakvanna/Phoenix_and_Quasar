@@ -6,7 +6,7 @@ import { defineComponent, provide } from 'vue';
 import {DefaultApolloClient} from "@vue/apollo-composable";
 import {ApolloClient, ApolloLink, concat, HttpLink, InMemoryCache} from "@apollo/client/core";
 import { LocalStorage } from 'quasar'
-import {LOGIN_INFO_KEY} from "app/helpers/utils";
+import {LOGIN_INFO_KEY} from "src/helpers/utils";
 
 const cache = new InMemoryCache({
   addTypename: false,

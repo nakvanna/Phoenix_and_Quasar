@@ -1,12 +1,13 @@
 defmodule PhoenixerApiWeb.Schema do
   use Absinthe.Schema
   use Absinthe.Relay.Schema, :modern
-  alias PhoenixerApi.Accounts
+  alias PhoenixerApi.{Accounts, Blogs}
 
   def context(ctx) do
     loader =
       Dataloader.new
       |> Dataloader.add_source(Accounts, Accounts.data())
+      |> Dataloader.add_source(Blogs, Blogs.data())
 
     Map.put(ctx, :loader, loader)
   end
@@ -25,7 +26,8 @@ defmodule PhoenixerApiWeb.Schema do
     PhoenixerApiWeb.Schema.Types.{
       User,
       Session,
-      Post
+      Post,
+      MediaPost
       }
   )
 
@@ -34,7 +36,8 @@ defmodule PhoenixerApiWeb.Schema do
     PhoenixerApiWeb.Schema.InputTypes.{
       User,
       Session,
-      Post
+      Post,
+      MediaPost
       }
   )
 
@@ -43,7 +46,8 @@ defmodule PhoenixerApiWeb.Schema do
     PhoenixerApiWeb.Schema.Resolvers.{
       User,
       Session,
-      Post
+      Post,
+      MediaPost
       }
   )
 
@@ -55,12 +59,14 @@ defmodule PhoenixerApiWeb.Schema do
   query do
     import_fields :user_queries
     import_fields :post_queries
+    import_fields :media_post_queries
   end
 
   mutation do
     import_fields :session_mutations
     import_fields :user_mutations
     import_fields :post_mutations
+    import_fields :media_post_mutations
   end
 
 end

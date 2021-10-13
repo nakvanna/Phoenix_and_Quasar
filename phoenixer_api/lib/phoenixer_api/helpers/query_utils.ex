@@ -1,5 +1,8 @@
 defmodule PhoenixerApi.Helpers.QueryUtil do
   import Ecto.Query, warn: false
+  alias PhoenixerApi.Helpers.QueryUtil
+  alias PhoenixerApi.Repo
+
 
   def query_where(args) do
     Enum.reduce(
@@ -49,5 +52,47 @@ defmodule PhoenixerApi.Helpers.QueryUtil do
         end
       end
     )
+  end
+
+  def filter_order_by(args) do
+    if Map.has_key?(args, :order_by) && check_value(args.order_by) do
+      [atom, op] = Regex.split(~r{-}, args.order_by)
+
+      case op do
+        "desc" -> [desc: dynamic([p], field(p, ^String.to_atom(atom)))]
+        "asc" -> dynamic([p], field(p, ^String.to_atom(atom)))
+        _ -> []
+      end
+    else
+      []
+    end
+  end
+  def filter_order_by(args, tbl_alias) do
+    if Map.has_key?(args, :order_by) && check_value(args.order_by) do
+      [atom, op] = Regex.split(~r{-}, args.order_by)
+
+      case op do
+        "desc" -> [desc: dynamic([{^tbl_alias, p}], field(p, ^String.to_atom(atom)))]
+        "asc" -> dynamic([{^tbl_alias, p}], field(p, ^String.to_atom(atom)))
+        _ -> []
+      end
+    else
+      []
+    end
+  end
+
+  defp check_value(value) do
+    value != nil && String.length(String.trim value) != 0
+  end
+
+  def apply_pagination(query, args) do
+    count = query
+            |> where(^QueryUtil.query_where(args))
+            |> Repo.aggregate(:count, :id)
+    result = query
+             |> where(^QueryUtil.query_where(args))
+             |> Absinthe.Relay.Connection.from_query(&Repo.all/1, args)
+    {:ok, edges} = result
+    {:ok, Map.put(edges, :count, count)}
   end
 end
