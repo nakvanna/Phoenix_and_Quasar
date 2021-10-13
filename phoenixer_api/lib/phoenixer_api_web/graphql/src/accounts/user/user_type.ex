@@ -3,6 +3,7 @@ defmodule PhoenixerApiWeb.Schema.Types.User do
 
   object :user do
     field :id, :id
+    field :profile, :string
     field :name, :string
     field :username, :string
     field :email, :string

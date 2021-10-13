@@ -20,6 +20,11 @@ defmodule PhoenixerApiWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/", PhoenixerApiWeb do
+    pipe_through :api
+    post "/file-upload", PageController, :file_upload
+  end
+
   scope "/" do
     pipe_through :api
 

@@ -3,8 +3,9 @@ defmodule PhoenixerApi.Accounts.User do
   import Ecto.Changeset
 
   schema "users" do
-    field :email, :string
+    field :profile, :string
     field :name, :string
+    field :email, :string
     field :password_hash, :string
     field :username, :string
     field :role, :string, default: "user"
@@ -18,7 +19,7 @@ defmodule PhoenixerApi.Accounts.User do
   @doc false
   def changeset(user, attrs) do
     user
-    |> cast(attrs, [:name, :username, :email, :password, :password_confirmation, :role, :verify])
+    |> cast(attrs, [:profile, :name, :username, :email, :password, :password_confirmation, :role, :verify])
     |> validate_required([:name, :username, :email, :password, :password_confirmation, :role, :verify])
     |> unique_constraint(:username, message: "Username already taken!")
     |> unique_constraint(:email, message: "Email already taken!")

@@ -2,6 +2,7 @@ defmodule PhoenixerApiWeb.Schema.InputTypes.User do
   use Absinthe.Schema.Notation
 
   input_object :create_user_input_type do
+    field :profile, :string
     field :name, non_null(:string)
     field :username, non_null(:string)
     field :email, non_null(:string)
@@ -10,6 +11,7 @@ defmodule PhoenixerApiWeb.Schema.InputTypes.User do
   end
 
   input_object :update_user_input_type do
+    field :profile, :string
     field :name, :string
     field :username, :string
     field :email, :string

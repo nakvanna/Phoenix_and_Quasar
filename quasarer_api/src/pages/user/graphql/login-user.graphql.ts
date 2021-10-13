@@ -7,6 +7,7 @@ export const loginUserGraphql = gql `
       token
       user{
         id
+        profile
         name
         username
         email
