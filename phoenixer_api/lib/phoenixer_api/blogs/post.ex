@@ -6,6 +6,7 @@ defmodule PhoenixerApi.Blogs.Post do
     field :content, :string
     field :status, :string
     field :title, :string
+    has_many :media_posts, PhoenixerApi.Blogs.MediaPost
     belongs_to :user, PhoenixerApi.Accounts.User
     timestamps()
   end

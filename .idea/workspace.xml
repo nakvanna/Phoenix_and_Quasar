@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6128e85c-8a3a-4060-b40a-01453914f8f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/phoenixer_api/assets/static/uploads/phoenix.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/phoenixer_api/assets/static/uploads/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/components/EditorComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/components/GlobalDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/components/MainToolBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/components/TestingComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/components/ToolBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/layouts/MainDrawer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/layouts/store/main-layout.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/pages/home/store/home.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/pages/post/NewPost.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/pages/post/graphql/create-post.graphql.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/pages/post/model/post.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/pages/post/store/post.store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quasarer_api/src/pages/upload/file-upload.graphql.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/absinthe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/absinthe.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/absinthe_plug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/absinthe_plug.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/absinthe_relay.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/absinthe_relay.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/bcrypt_elixir.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/bcrypt_elixir.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/comeonin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/comeonin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/connection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/cors_plug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/cors_plug.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/cowboy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/cowboy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/cowlib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/cowlib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/dataloader.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/dataloader.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/db_connection.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/db_connection.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/decimal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/decimal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/ecto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/ecto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/ecto_sql.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/ecto_sql.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/elixir_make.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/elixir_make.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/file_system.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/file_system.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/gettext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/gettext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/guardian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/guardian.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/jason.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/jason.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/jose.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/jose.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/mime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/mime.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/nimble_parsec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/nimble_parsec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_ecto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_ecto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_html.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_html.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_live_dashboard.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_live_dashboard.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_live_reload.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_live_reload.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_live_view.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_live_view.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_pubsub.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/phoenix_pubsub.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/plug.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/plug.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/plug_cowboy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/plug_cowboy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/plug_crypto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/plug_crypto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/postgrex.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/postgrex.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/ranch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/ranch.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/telemetry.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/telemetry.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/telemetry_metrics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/telemetry_metrics.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/telemetry_poller.xml" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/.idea/libraries/telemetry_poller.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/assets/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/assets/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/accounts/user.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/accounts/user.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/blogs.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/blogs.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/blogs/post.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/blogs/post.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/helpers/query_utils.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api/helpers/query_utils.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/controllers/page_controller.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/controllers/page_controller.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/endpoint.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/endpoint.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/schema.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/schema.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/accounts/user/user_input_type.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/accounts/user/user_input_type.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/accounts/user/user_type.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/accounts/user/user_type.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/blogs/post/post_input_type.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/blogs/post/post_input_type.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/blogs/post/post_resolver.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/blogs/post/post_resolver.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/blogs/post/post_type.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/graphql/src/blogs/post/post_type.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/router.ex" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/lib/phoenixer_api_web/router.ex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/priv/repo/migrations/20210828031350_create_users.exs" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/priv/repo/migrations/20210828031350_create_users.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phoenixer_api/test/phoenixer_api/blogs_test.exs" beforeDir="false" afterPath="$PROJECT_DIR$/phoenixer_api/test/phoenixer_api/blogs_test.exs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/helpers/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/helpers/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/schema.graphql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/boot/route_middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/boot/route_middleware.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/layouts/MainLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/home/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/post/Post.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/post/Post.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/post/graphql/post.graphql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/post/graphql/post.graphql.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/user/User.vue" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/user/User.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/user/graphql/login-user.graphql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/user/graphql/login-user.graphql.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/user/graphql/user.graphql.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/user/graphql/user.graphql.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/user/model/users.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/user/model/users.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quasarer_api/src/pages/user/store/user.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quasarer_api/src/pages/user/store/user.store.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1zSKo1vDrOZYaDm8gX4cb2ho7g5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MTHome" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6128e85c-8a3a-4060-b40a-01453914f8f9" name="Changes" comment="" />
+      <created>1634136221666</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634136221666</updated>
+      <workItem from="1634136222771" duration="3000" />
+    </task>
+    <servers />
+  </component>
+</project>

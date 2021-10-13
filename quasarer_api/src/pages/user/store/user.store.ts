@@ -3,9 +3,9 @@ import {userGraphql} from "pages/user/graphql/user.graphql";
 import {useMutation, useQuery, useResult} from "@vue/apollo-composable";
 import {createUserGraphql} from "pages/user/graphql/create-user.graphql";
 import {LoginUserModel, UserModel} from "pages/user/model/users.model";
-import {cleanObject, crudMessage, LOGIN_INFO_KEY} from "app/helpers/utils";
 import {loginUserGraphql} from "pages/user/graphql/login-user.graphql";
 import { LocalStorage } from 'quasar'
+import {cleanObject, crudMessage, LOGIN_INFO_KEY} from "src/helpers/utils";
 
 const userGraphqlState = {
   userQueryDoc: {
@@ -31,6 +31,13 @@ export function readUser() {
           label: 'ID',
           align: 'left',
           field: 'id',
+          sortable: true
+        },{
+          name: 'profile',
+          required: true,
+          label: 'PROFILE',
+          align: 'left',
+          field: 'profile',
           sortable: true
         },
         {

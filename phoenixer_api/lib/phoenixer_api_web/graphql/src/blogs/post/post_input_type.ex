@@ -6,6 +6,7 @@ defmodule PhoenixerApiWeb.Schema.InputTypes.Post do
     field :title, non_null(:string)
     field :content, non_null(:string)
     field :user_id, non_null(:id)
+    field :media_posts, list_of(:create_media_post_input_type)
   end
 
   input_object :update_post_input_type do

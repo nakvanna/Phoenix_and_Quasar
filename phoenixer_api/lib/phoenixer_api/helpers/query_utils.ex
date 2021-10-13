@@ -54,6 +54,37 @@ defmodule PhoenixerApi.Helpers.QueryUtil do
     )
   end
 
+  def filter_order_by(args) do
+    if Map.has_key?(args, :order_by) && check_value(args.order_by) do
+      [atom, op] = Regex.split(~r{-}, args.order_by)
+
+      case op do
+        "desc" -> [desc: dynamic([p], field(p, ^String.to_atom(atom)))]
+        "asc" -> dynamic([p], field(p, ^String.to_atom(atom)))
+        _ -> []
+      end
+    else
+      []
+    end
+  end
+  def filter_order_by(args, tbl_alias) do
+    if Map.has_key?(args, :order_by) && check_value(args.order_by) do
+      [atom, op] = Regex.split(~r{-}, args.order_by)
+
+      case op do
+        "desc" -> [desc: dynamic([{^tbl_alias, p}], field(p, ^String.to_atom(atom)))]
+        "asc" -> dynamic([{^tbl_alias, p}], field(p, ^String.to_atom(atom)))
+        _ -> []
+      end
+    else
+      []
+    end
+  end
+
+  defp check_value(value) do
+    value != nil && String.length(String.trim value) != 0
+  end
+
   def apply_pagination(query, args) do
     count = query
             |> where(^QueryUtil.query_where(args))

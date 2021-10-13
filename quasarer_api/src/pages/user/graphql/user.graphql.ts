@@ -8,6 +8,7 @@ export const userGraphql = gql `
       edges{
         node{
           id
+          profile
           name
           username
           email

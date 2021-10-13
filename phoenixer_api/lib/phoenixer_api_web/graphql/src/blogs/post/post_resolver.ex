@@ -15,7 +15,8 @@ defmodule PhoenixerApiWeb.Schema.Resolvers.Post do
     connection field :posts, node_type: :post do
       arg :condition, non_null(:json)
       arg :user_arg, non_null(:arg_condition)
-      #      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
+      arg(:order_by, :string)
+      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
       resolve(
         fn args, _
         ->
@@ -45,6 +46,7 @@ defmodule PhoenixerApiWeb.Schema.Resolvers.Post do
       resolve(
         fn args, _ ->
           Blogs.create_post(args.data)
+          #          {:ok, %{success: true, message: "testing"}}
         end
       )
     end

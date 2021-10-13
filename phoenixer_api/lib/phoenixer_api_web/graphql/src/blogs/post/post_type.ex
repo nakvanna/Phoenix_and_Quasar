@@ -2,6 +2,7 @@ defmodule PhoenixerApiWeb.Schema.Types.Post do
   use Absinthe.Schema.Notation
   import Absinthe.Resolution.Helpers, only: [dataloader: 1]
   alias PhoenixerApi.Accounts
+  alias PhoenixerApi.Blogs
 
   object :post do
     field :id, :id
@@ -14,6 +15,7 @@ defmodule PhoenixerApiWeb.Schema.Types.Post do
 
     #Relationship
     field :user, :user, resolve: dataloader(Accounts)
+    field :media_posts, list_of(:media_post), resolve: dataloader(Blogs)
   end
 
 end

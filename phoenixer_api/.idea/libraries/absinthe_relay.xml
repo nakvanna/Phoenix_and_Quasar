@@ -3,9 +3,19 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_relay/ebin" />
       <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_relay/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_relay/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_relay/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_relay/ebin" />
+      <root url="file://$PROJECT_DIR$/_build/dev/lib/absinthe_relay/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
+      <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
       <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
       <root url="file://$PROJECT_DIR$/deps/absinthe_relay/lib" />
     </SOURCES>

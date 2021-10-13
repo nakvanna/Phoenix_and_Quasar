@@ -1,6 +1,7 @@
 
 export interface UserModel {
   id?: string | any
+  profile?: string | any
   name?: string | any
   username?: string | any
   email?: string | any
