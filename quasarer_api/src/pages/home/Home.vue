@@ -64,6 +64,7 @@ export default defineComponent({
     const md = {
       home: {
         getImageFullUrl: (data: MediaPostModel[], index: number) => {
+          console.log(data[index].fileUrl)
           return SERVER_URL +'/'+data[index].fileUrl
         }
       }
