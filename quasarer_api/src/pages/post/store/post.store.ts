@@ -35,21 +35,21 @@ export function readPost() {
           align: 'left',
           field: 'id',
           sortable: true
-        },{
+        }, {
           name: 'title',
           required: true,
           label: 'TITLE',
           align: 'left',
           field: 'title',
           sortable: true
-        },{
+        }, {
           name: 'content',
           required: true,
           label: 'CONTENT',
           align: 'left',
           field: 'content',
           sortable: true
-        },{
+        }, {
           name: 'status',
           required: true,
           label: 'STATUS',
@@ -82,7 +82,7 @@ export function createPost() {
     post: {
       input: <PostModel>{
         status: 'public',
-        content: "Hello",
+        content: '<pre>Leave your content here!</pre>',
         mediaPosts: <MediaPostModel[]>[]
       }
     }

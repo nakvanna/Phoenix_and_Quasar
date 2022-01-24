@@ -7,7 +7,8 @@ defmodule PhoenixerApiWeb.PageController do
 
   def file_upload(conn, params) do
     file = params["file"]
-    File.cp(file.path, "assets/static/uploads/#{file.filename}")
+    #    File.cp(file.path, "assets/static/uploads/#{file.filename}")
+    File.cp(file.path, "priv/static/uploads/#{file.filename}")
     json(conn, %{success: true, url: "uploads/#{file.filename}"})
   end
 end
