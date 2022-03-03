@@ -4,7 +4,7 @@ import {useMutation, useQuery, useResult} from "@vue/apollo-composable";
 import {createUserGraphql} from "pages/user/graphql/create-user.graphql";
 import {LoginUserModel, UserModel} from "pages/user/model/users.model";
 import {loginUserGraphql} from "pages/user/graphql/login-user.graphql";
-import { LocalStorage } from 'quasar'
+import {LocalStorage} from 'quasar'
 import {cleanObject, crudMessage, LOGIN_INFO_KEY} from "src/helpers/utils";
 
 const userGraphqlState = {
@@ -32,7 +32,7 @@ export function readUser() {
           align: 'left',
           field: 'id',
           sortable: true
-        },{
+        }, {
           name: 'profile',
           required: true,
           label: 'PROFILE',
@@ -171,7 +171,8 @@ export function loginUser() {
             crudMessage.successMsg('ចូលបានជោគជ័យ!')
           })
           .catch(_err => {
-            crudMessage.errorMsg('បរាជ័យក្នុងការចូល!')
+            crudMessage.errorMsg(_err.toString())
+            // crudMessage.errorMsg('បរាជ័យក្នុងការចូល!')
           })
       },
       clear: () => {

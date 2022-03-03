@@ -16,7 +16,7 @@ defmodule PhoenixerApiWeb.Schema.Resolvers.Post do
       arg :condition, non_null(:json)
       arg :user_arg, non_null(:arg_condition)
       arg(:order_by, :string)
-      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
+      #      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
       resolve(
         fn args, _
         ->
@@ -27,7 +27,7 @@ defmodule PhoenixerApiWeb.Schema.Resolvers.Post do
 
     field :find_post, :post do
       arg :id, :id
-      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
+      #      middleware PhoenixerApiWeb.Graphql.Middleware, ["user"]
       resolve(
         fn args, _ ->
           case Blogs.get_post(args.id) do

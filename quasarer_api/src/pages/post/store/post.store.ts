@@ -17,7 +17,7 @@ export function readPost() {
   const state = reactive({
     queryVariable: {
       post: {
-        first: 15,
+        first: 10,
         condition: JSON.stringify({}),
         userArg: {
           condition: JSON.stringify({

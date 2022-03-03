@@ -40,7 +40,6 @@
                 />
               </div>
             </div>
-
           </q-card-section>
         </q-card>
       </q-item>
@@ -64,7 +63,10 @@ export default defineComponent({
     const md = {
       home: {
         getImageFullUrl: (data: MediaPostModel[], index: number) => {
-          return SERVER_URL + '/' + data[index].fileUrl
+          if (data[index]?.fileUrl === null) {
+            return ''
+          }
+          return SERVER_URL + '/' + data[index]?.fileUrl
         }
       }
     }

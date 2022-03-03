@@ -1,11 +1,11 @@
 <template>
-  <router-view />
+  <router-view/>
 </template>
 <script lang="ts">
-import { defineComponent, provide } from 'vue';
+import {defineComponent, provide} from 'vue';
 import {DefaultApolloClient} from "@vue/apollo-composable";
 import {ApolloClient, ApolloLink, concat, HttpLink, InMemoryCache} from "@apollo/client/core";
-import { LocalStorage } from 'quasar'
+import {LocalStorage} from 'quasar'
 import {LOGIN_INFO_KEY} from "src/helpers/utils";
 
 const cache = new InMemoryCache({
@@ -16,13 +16,14 @@ let userInfo = <any>LocalStorage.getItem(LOGIN_INFO_KEY)
 
 
 const httpLink = new HttpLink({uri: 'http://127.0.0.1:4000/graphql'});
+// const httpLink = new HttpLink({uri: 'http://10.0.2.2:4000/graphql'});
 
 const authMiddleware = new ApolloLink((operation, forward) => {
 
   operation.setContext(({headers = {}}) => ({
     headers: {
       ...headers,
-      authorization: `Bearer ${userInfo? userInfo['token'] : ''}`
+      authorization: `Bearer ${userInfo ? userInfo['token'] : ''}`
     }
   }));
 
@@ -30,13 +31,13 @@ const authMiddleware = new ApolloLink((operation, forward) => {
 })
 
 const apolloClient = new ApolloClient({
-  link: userInfo? concat(authMiddleware, httpLink) : httpLink,
+  link: userInfo ? concat(authMiddleware, httpLink) : httpLink,
   cache
 })
 
 export default defineComponent({
   name: 'App',
-  setup () {
+  setup() {
     provide(DefaultApolloClient, apolloClient)
   },
 })
